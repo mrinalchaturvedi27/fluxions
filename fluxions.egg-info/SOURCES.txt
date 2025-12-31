@@ -1,0 +1,8 @@
+setup.py
+fluxions/__init__.py
+fluxions/tensor.py
+fluxions.egg-info/PKG-INFO
+fluxions.egg-info/SOURCES.txt
+fluxions.egg-info/dependency_links.txt
+fluxions.egg-info/requires.txt
+fluxions.egg-info/top_level.txt
