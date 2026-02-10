@@ -3,5 +3,6 @@ project(fluxions)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(fluxions main.cpp
-        memory/memory.h)
+add_executable(fluxions
+        memory/mem.h
+        memory/mem.cc)
