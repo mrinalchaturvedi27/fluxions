@@ -1,0 +1,5 @@
+if(EXISTS "/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake")
+  include("/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake")
+else()
+  add_test(test_memory_NOT_BUILT test_memory_NOT_BUILT)
+endif()

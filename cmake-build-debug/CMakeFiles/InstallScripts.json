@@ -1,0 +1,8 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/cmake_install.cmake",
+		"/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/fluxions/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.1"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "fluxions",
+					"jsonFile" : "directory-fluxions-Debug-6b9230bd9b1380a759ff.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "4.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "fluxions",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "fluxions_repo"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : ".",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "fluxions_memory::@173bfc8b5426b615c1c4",
+					"jsonFile" : "target-fluxions_memory-Debug-805ba7ab1165a27b1c7f.json",
+					"name" : "fluxions_memory",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "test_memory::@173bfc8b5426b615c1c4",
+					"jsonFile" : "target-test_memory-Debug-8d663c0f6412aef41b1e.json",
+					"name" : "test_memory",
+					"projectIndex" : 1
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug",
+		"source" : "/Users/mrinalchaturvedi/CLionProjects/fluxions"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

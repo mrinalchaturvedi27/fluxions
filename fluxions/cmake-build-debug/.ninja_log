@@ -1,0 +1,23 @@
+# ninja log v6
+4	688	1771078313236860219	build.ninja	249fe5e5bbec626
+972	3152	1771076939466503430	test_memory[1]_tests.cmake	cac439ba6e60435b
+972	3152	1771076939466503430	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake	cac439ba6e60435b
+10	1032	1771078232979026936	CMakeFiles/test_memory.dir/tests/test_memory.cpp.o	3bac2464cf5bfaa4
+4	688	1771078313235878713	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/cmake_install.cmake	249fe5e5bbec626
+819	864	1771076937134287371	libfluxions_lib.a	1ac86056275ed94
+972	3152	1771076939466503430	test_memory	cac439ba6e60435b
+21	1451	1771078318606528445	CMakeFiles/fluxions_memory.dir/memory/mem.cc.o	4da1374f7456b978
+21	1453	1771078318606879807	CMakeFiles/fluxions_memory.dir/memory/mem_pool.cc.o	6359277ccbc51ed0
+1453	1531	1771078320038578081	libfluxions_memory.a	7497115eaa804fb0
+21	1643	1771078318607078508	CMakeFiles/test_memory.dir/tests/test_memory.cpp.o	68074e9e71ed2d87
+1643	2881	1771078321465702314	test_memory	dae899e99baa9284
+1643	2881	1771078321465702314	test_memory[1]_tests.cmake	dae899e99baa9284
+1643	2881	1771078321465702314	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake	dae899e99baa9284
+39	1286	1771078378701929909	CMakeFiles/test_memory.dir/tests/test_memory.cpp.o	68074e9e71ed2d87
+1286	2296	1771078380956991518	test_memory	dae899e99baa9284
+1286	2296	1771078380956991518	test_memory[1]_tests.cmake	dae899e99baa9284
+1286	2296	1771078380956991518	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake	dae899e99baa9284
+20	1307	1771078653336911118	CMakeFiles/test_memory.dir/tests/test_memory.cpp.o	68074e9e71ed2d87
+1307	2402	1771078655717120862	test_memory	dae899e99baa9284
+1307	2402	1771078655717120862	test_memory[1]_tests.cmake	dae899e99baa9284
+1307	2402	1771078655717120862	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/test_memory[1]_tests.cmake	dae899e99baa9284

@@ -1,0 +1,8 @@
+# ninja log v6
+1	688	1771079676917679065	fluxions/CMakeFiles/fluxions_memory.dir/memory/mem.cc.o	c23fb5d365048c23
+1	692	1771079676918054635	fluxions/CMakeFiles/fluxions_memory.dir/memory/mem_pool.cc.o	e86b1084db174027
+692	741	1771079677608893040	fluxions/libfluxions_memory.a	ea3bc356e21647bd
+2	868	1771079676918216755	fluxions/CMakeFiles/test_memory.dir/tests/test_memory.cpp.o	cce14cb9e8cbb285
+868	1857	1771079678772900628	fluxions/test_memory	536380a097b860a5
+868	1857	1771079678772900628	fluxions/test_memory[1]_tests.cmake	536380a097b860a5
+868	1857	1771079678772900628	/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/fluxions/test_memory[1]_tests.cmake	536380a097b860a5

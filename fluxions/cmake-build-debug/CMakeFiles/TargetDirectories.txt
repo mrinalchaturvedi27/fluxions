@@ -1,0 +1,4 @@
+/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/CMakeFiles/fluxions_memory.dir
+/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/CMakeFiles/test_memory.dir
+/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/mrinalchaturvedi/CLionProjects/fluxions/cmake-build-debug/CMakeFiles/rebuild_cache.dir
