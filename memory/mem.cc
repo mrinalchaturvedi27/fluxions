@@ -1,5 +1,7 @@
 #include "mem.h"
 #include <iostream>
+#include <cstring>
+#include <cstdlib>
 #include <mm_malloc.h>
 using namespace std;
 
