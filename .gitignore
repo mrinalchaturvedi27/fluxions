@@ -2,7 +2,7 @@
 # Build directories
 # ===============================
 build/
-cmake-build-*/
+cmake-build-debug*/
 out/
 bin/
 lib/
