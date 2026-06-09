@@ -2,6 +2,31 @@ cmake_minimum_required(VERSION 4.1)
 project(.)
 
 set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include(FetchContent)
+
+find_package(Eigen3 QUIET NO_MODULE)
+
+if(NOT Eigen3_FOUND)
+        FetchContent_Declare(
+                eigen
+                URL https://gitlab.com/libeigen/eigen/-/archive/5.0.0/eigen-5.0.0.tar.gz
+        )
+        FetchContent_MakeAvailable(eigen)
+endif()
+
+add_library(fluxions_core
+        core/tensor.cc
+)
+
+target_include_directories(fluxions_core PUBLIC
+        ${CMAKE_CURRENT_SOURCE_DIR}
+)
+
+target_link_libraries(fluxions_core PUBLIC
+        Eigen3::Eigen
+)
 
 add_library(fluxions_memory
         memory/mem.cc
@@ -9,6 +34,10 @@ add_library(fluxions_memory
 )
 
 target_include_directories(fluxions_memory PUBLIC memory)
+
+target_link_libraries(fluxions_memory PUBLIC
+        fluxions_core
+)
 
 find_package(GTest REQUIRED)
 
