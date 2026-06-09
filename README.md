@@ -58,38 +58,6 @@ Tensor Class Structure:
 └─────────────────────────────────┘
 ```
 
-## Phase A: Tensor + Tiny Autograd Core
-
-Build this before thinking about memory pools, datasets, or MNIST.
-
-- [ ] Use direct `Eigen::MatrixXf` first, or define a thin `Tensor` wrapper over Eigen
-- [ ] Define `Parameter`, `Node`, `Expression`, and `ComputationGraph`
-- [ ] Store graph nodes in creation order
-- [ ] Implement `forward(target)` by evaluating nodes from first to target
-- [ ] Implement `backward(loss)` by iterating nodes in reverse order
-- [ ] Use `+=` for gradient accumulation, never overwrite input gradients
-- [ ] Clear the graph after each training example or mini-batch
-
-Core operations:
-
-- [ ] Input node
-- [ ] Parameter node
-- [ ] Add
-- [ ] Matrix multiply
-- [ ] Tanh
-- [ ] ReLU
-- [ ] Sum / mean reduction
-- [ ] Mean squared error
-
-Validation:
-
-- [ ] Unit test forward values for every operation
-- [ ] Finite-difference gradient check for add, matmul, tanh/ReLU, and reductions
-- [ ] Confirm gradients accumulate with repeated use, e.g. `y = x * x + x`
-
-Milestone:
-
-- [ ] Scalar and matrix autograd tests pass
 
 ## Current Layout
 
