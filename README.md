@@ -11,6 +11,7 @@ cmake --build cmake-build-debug
 ctest --test-dir cmake-build-debug --output-on-failure
 ```
 
+# Phase-A Foundations
 ## Tensor Operations
 
 Our Tensor class will support all fundamental operations that neural networks
@@ -59,7 +60,7 @@ Tensor Class Structure:
 ```
 
 
-## Current Layout
+# Current Layout
 
 ```text
 fluxions/
@@ -72,7 +73,7 @@ fluxions/
 └── tests/     GoogleTest tests
 ```
 
-## Planned Layout
+# Planned Layout
 
 ```text
 fluxions/
