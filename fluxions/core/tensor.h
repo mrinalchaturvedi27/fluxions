@@ -7,7 +7,7 @@
 
 #include <Eigen/Dense>
 #include <string>
-
+#include "core/dim.h"
 namespace fluxions {
 
 using Scalar = float;
@@ -22,7 +22,9 @@ private:
 public:
     Tensor();
     explicit Tensor(Matrix data);
+    explicit Tensor(const Dim& dim);
     Tensor(int rows, int cols);
+    Dim dim() const;
 
     const Matrix& data() const;
 

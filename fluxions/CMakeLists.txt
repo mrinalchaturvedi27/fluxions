@@ -14,7 +14,9 @@ if(NOT Eigen3_FOUND)
 endif()
 
 add_library(fluxions_core
+        core/dim.cc
         core/tensor.cc
+        params/parameter.cc
 )
 
 target_include_directories(fluxions_core PUBLIC

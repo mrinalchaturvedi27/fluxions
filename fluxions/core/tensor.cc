@@ -15,6 +15,15 @@ Tensor::Tensor() = default;
 Tensor::Tensor(Matrix data)
     : data_(std::move(data)) {}
 
+    Tensor::Tensor(const Dim& dim)
+         : data_(dim.rows(), dim.cols()) {
+    data_.setZero();
+}
+
+    Dim Tensor::dim() const {
+    return Dim(rows(), cols());
+}
+
 Tensor::Tensor(int row, int col)
     : data_(row, col) {
     data_.setZero();
