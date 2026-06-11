@@ -12,6 +12,15 @@ ctest --test-dir cmake-build-debug --output-on-failure
 ```
 
 # Phase-A Foundations
+
+Fluxions currently has the first pieces of the core training stack:
+
+- `Dim`: lightweight shape metadata with a separate batch count
+- `Tensor`: Eigen-backed numerical storage and basic math
+- `ParameterStorage`: owns trainable values and gradients
+- `Parameter`: lightweight handle to shared parameter storage
+- `ParameterCollection`: owns all model parameters
+
 ## Tensor Operations
 
 Our Tensor class will support all fundamental operations that neural networks
@@ -59,17 +68,66 @@ Tensor Class Structure:
 └─────────────────────────────────┘
 ```
 
+## Dim Class Architecture
+
+`Dim` stores tensor shape metadata separately from tensor values.
+
+```text
+Dim Structure:
+┌─────────────────────────────────┐
+│ Core Attributes:                │
+│ • rows_: unsigned int           │
+│ • cols_: unsigned int           │
+│ • batch_: unsigned int          │
+├─────────────────────────────────┤
+│ Shape Helpers:                  │
+│ • rows(), cols()                │
+│ • batch_elems()                 │
+│ • batch_size(), size()          │
+│ • ndims()                       │
+├─────────────────────────────────┤
+│ Transformations:                │
+│ • transpose()                   │
+│ • single_batch()                │
+└─────────────────────────────────┘
+```
+
+Batch is tracked separately, following DyNet's shape design:
+
+```text
+Dim(3, 4)      -> {3,4}
+Dim(3, 4, 32)  -> {3,4X32}
+```
+
+## Parameter Architecture
+
+Parameters are split into storage, handles, and collections.
+
+```text
+ParameterStorage:
+  owns value tensor, gradient tensor, name, trainable flag
+
+Parameter:
+  lightweight shared handle to ParameterStorage
+
+ParameterCollection:
+  owns all ParameterStorage objects for a model
+```
+
+This keeps parameter copies cheap while preserving one real copy of each trainable
+tensor.
+
 
 # Current Layout
 
 ```text
 fluxions/
-├── core/      Eigen-backed Tensor core
+├── core/      Dim metadata and Eigen-backed Tensor core
 ├── docs/      Eigen notes and development references
 ├── memory/    Memory pool and device metadata
 ├── ops/       Planned operation implementations
 ├── optim/     Planned optimizers
-├── params/    Planned parameter abstractions
+├── params/    Parameter storage, handles, and collections
 └── tests/     GoogleTest tests
 ```
 
@@ -78,6 +136,8 @@ fluxions/
 ```text
 fluxions/
 ├── core/
+│   ├── dim.h
+│   ├── dim.cc
 │   ├── tensor.h
 │   └── tensor.cc
 │
@@ -97,8 +157,7 @@ fluxions/
 │   └── losses.h/.cc
 │
 ├── params/
-│   ├── parameter.h/.cc
-│   └── parameter_collection.h/.cc
+│   └── parameter.h/.cc
 │
 ├── optim/
 │   ├── optimizer.h/.cc
